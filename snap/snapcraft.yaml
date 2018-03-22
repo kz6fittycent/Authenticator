@@ -29,7 +29,7 @@ parts:
       - libsecret-1-dev
       - gnome-screenshot
       
-    prepare: |
+    build: |
       meson builddir
       ninja -C builddir install
       
