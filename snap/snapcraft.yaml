@@ -24,7 +24,7 @@ parts:
       - python3
       - meson
       - ninja-build
-      - python3-pyotp
+      # - python3-pyotp
       - libzbar-dev
       - libsecret-1-dev
       - gnome-screenshot
