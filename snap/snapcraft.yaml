@@ -24,8 +24,9 @@ parts:
       #pip install pyotp pyzbar pyaml Pillow meson ninja
       
     meson-parameters:
-      #- builddir
-      - ninja -C install
+      - meson builddir
+      - cd builddir
+      - ninja -C builddir install
       
     build-packages:
       - python3
