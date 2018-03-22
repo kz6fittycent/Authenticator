@@ -19,7 +19,7 @@ parts:
     source: https://github.com/kz6fittycent/Authenticator
     source-type: git
     plugin: python3
-    
+          
     build-packages:
       - python3
       - meson
@@ -28,6 +28,10 @@ parts:
       - libzbar-dev
       - libsecret-1-dev
       - gnome-screenshot
+      
+    prepare: |
+      meson builddir
+      ninja -C builddir install
       
     stage-packages:
       - python3
