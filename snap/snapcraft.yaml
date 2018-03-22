@@ -1,6 +1,6 @@
 name: authenticator # check to see if it's available
 version: '1.0+git' # this is freakin' awesome
-summary: Two-factor authentication code generator for Gnome. Created with love using Python and Gtk. # 79 char long summary
+summary: Two-factor authentication code generator for Gnome. # 79 char long summary
 description: |
   Two-factor authentication code generator for Gnome. Created with love using Python and Gtk.
 grade: stable # must be 'stable' to release into candidate/stable channels
