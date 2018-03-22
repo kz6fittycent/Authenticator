@@ -40,4 +40,4 @@ parts:
       - python3
       - gnome-screenshot
       - libzbar-dev
-      - libsecret-1-de
+      - libsecret-1-dev
