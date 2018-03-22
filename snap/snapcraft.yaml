@@ -25,8 +25,12 @@ parts:
       
     meson-parameters:
       - meson builddir
-      - cd builddir
-      - ninja -C builddir install
+      
+    prepare: |
+      cd builddir
+      
+    install: |
+      ninja -C builddir install
       
     build-packages:
       - python3
