@@ -18,21 +18,26 @@ parts:
   my-part:
     source: https://github.com/kz6fittycent/Authenticator
     source-type: git
-    plugin: python3
-          
+    plugin: meson
+    
+    prepare: |
+      pip3 install pyotp pyzbar pyaml Pillow meson ninja
+      
+    meson-parameters:
+      - builddir
+      - ninja -C builddir install
+      
     build-packages:
       - python3
-      - meson
-      - ninja-build
+      # - meson
+      # - ninja-build
       # - python3-pyotp
       - libzbar-dev
       - libsecret-1-dev
       - gnome-screenshot
-      
-    build: |
-      meson builddir
-      ninja -C builddir install
-      
+            
     stage-packages:
       - python3
       - gnome-screenshot
+      - libzbar-dev
+      - libsecret-1-de
