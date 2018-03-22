@@ -20,8 +20,8 @@ parts:
     source-type: git
     plugin: meson
     
-    prepare: |
-      pip install pyotp pyzbar pyaml Pillow meson ninja
+    #prepare: |
+      #pip install pyotp pyzbar pyaml Pillow meson ninja
       
     meson-parameters:
       - builddir
