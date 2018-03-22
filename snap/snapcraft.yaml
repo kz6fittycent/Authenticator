@@ -1,0 +1,34 @@
+name: authenticator # check to see if it's available
+version: '1.0+git' # this is freakin' awesome
+summary: Two-factor authentication code generator for Gnome. Created with love using Python and Gtk. # 79 char long summary
+description: |
+  Two-factor authentication code generator for Gnome. Created with love using Python and Gtk.
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs
+
+apps:
+  authenticator:
+    command: authenticator
+    plugs:
+      - home
+      - network
+      - network-bind
+     
+parts: 
+  my-part:
+    source: https://github.com/kz6fittycent/Authenticator
+    source-type: git
+    plugin: python3
+    
+    build-packages:
+      - python3
+      - meson
+      - ninja-build
+      - python3-pyotp
+      - libzbar-dev
+      - libsecret-1-dev
+      - gnome-screenshot
+      
+    stage-packages:
+      - python3
+      - gnome-screenshot
