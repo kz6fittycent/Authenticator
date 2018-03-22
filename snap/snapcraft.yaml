@@ -21,7 +21,7 @@ parts:
     plugin: meson
     
     prepare: |
-      pip3 install pyotp pyzbar pyaml Pillow meson ninja
+      pip install pyotp pyzbar pyaml Pillow meson ninja
       
     meson-parameters:
       - builddir
