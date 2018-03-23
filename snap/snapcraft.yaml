@@ -26,8 +26,8 @@ parts:
     meson-parameters:
       - meson builddir
       
-    prepare: |
-      cd builddir
+    # prepare: |
+      # cd builddir
       
     install: |
       ninja -C builddir install
